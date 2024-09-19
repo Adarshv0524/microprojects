@@ -1,0 +1,1065 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d0d7e6; /* Gentle light background for comfort */
+    color: #0a0000; /* Softer text color */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000; /* Dark background for the space effect */
+    overflow: visible;
+}
+
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.05) 50%, transparent 50%);
+    background-size: 2px 2px, 5px 5px, 10px 10px; /* Star size */
+    background-repeat: repeat, repeat, repeat;
+    animation: twinkle 2s infinite; /* Apply twinkling animation */
+    z-index: -1; /* Place it behind other content */
+}
+
+/* Keyframes for twinkling effect */
+@keyframes twinkle {
+    0% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+
+
+
+
+
+
+/* Header Styling */
+header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.9), rgba(50, 50, 50, 0.9)), url('path/to/nebula-background.jpg') no-repeat center center; /* Nebula effect with gradient */
+    background-size: cover; /* Cover the entire header area */
+    color: #e0e0e0; /* Light grey text for contrast */
+    padding: 10px 25px; /* Thinner padding */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* More pronounced shadow for floating effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Faint border for definition */
+    position: relative; /* Ensure the header is positioned for effects */
+}
+
+/* Header Container */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Site Title */
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    letter-spacing: 2px; /* Wider spacing for a sleek look */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced text shadow for floating effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Site Title Hover Effect */
+.site-title:hover {
+    color: #ffcc80; /* Subtle color change on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px; /* Increased spacing for visual appeal */
+}
+
+/* Social Icons Links */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+/* Social Icons Hover Effect */
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Faint hover effect */
+    transform: scale(1.1); /* Slight enlargement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Social Icons Font Awesome Icons */
+.social-icons span {
+    font-size: 1.5rem; /* Larger icons for better visibility */
+    color: #e0e0e0; /* Soft color for icons */
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+/* Social Icons Hover Font Awesome Icons Effect */
+.social-icons a:hover span {
+    color: #ffcc80; /* Gentle color change on hover */
+    transform: rotate(360deg); /* Spin effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px; /* Reduced padding for smaller screens */
+    }
+
+    .site-title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Container Styles */
+.main-container {
+    display: flex;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+/* Sidebar Styling */
+.sidebar {
+    background: radial-gradient(circle, #0a0a0a, #1f1f1f); /* Deep cosmic gradient */
+    border-radius: 50px; /* Highly rounded for an extraterrestrial look */
+    padding: 30px;
+    margin: 20px 0;
+    height: 90vh;
+    width: 320px; /* Slightly wider for better proportions */
+    position: sticky; /* Stays in place while scrolling */
+    top: 20px; /* Offset from the top */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); /* Deep shadow for a floating effect */
+    backdrop-filter: blur(10px); /* Glassmorphism effect for an alien touch */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Smooth hover interaction */
+}
+
+/* Sidebar Hover Effect */
+.sidebar:hover {
+    transform: scale(1.05) translateY(-10px); /* Slight zoom and lift */
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+}
+
+/* Sidebar Content */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0; /* Soft, alien-like text color */
+}
+
+/* Sidebar Heading */
+.sidebar h2 {
+    font-size: 1.8rem;
+    color: #f0f0f0; /* Bright heading color */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6); /* Strong shadow for depth */
+    position: relative;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Sidebar Heading Glow Effect */
+.sidebar h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00bcd4, #8e44ad); /* Gradient underline */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle glow */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+
+.sidebar h2:hover::before {
+    transform: scaleX(1); /* Expand gradient underline on hover */
+}
+
+/* Sidebar Paragraph */
+.sidebar p {
+    font-size: 1.1rem;
+    color: #b0b0b0; /* Light, subtle text color */
+    margin-bottom: 40px;
+    line-height: 1.7;
+    text-align:justify;
+    transition: color 0.4s ease;
+
+
+}
+
+/* Quick Links List */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Quick Links Items */
+.quick-links li {
+    margin-bottom: 15px;
+}
+
+/* Quick Links Anchor Tag */
+.quick-links a {
+    display: block;
+    text-decoration: none;
+    color: #e0e0f1; /* Soft, alien-inspired link color */
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 14px 20px;
+    background: rgba(0, 0, 0, 0.1); /* Very subtle background */
+    border-radius: 30px; /* More rounded for alien feel */
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Shadow around links */
+    text-align: center;
+}
+
+/* Quick Links Hover Effect */
+.quick-links a:hover {
+    background: linear-gradient(135deg, #00bcd4, #8e44ad); /* Alien color gradient on hover */
+    color: #fff; /* Brighter text on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Quick Links Hover Effect: Pulsing Animation */
+.quick-links a:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+    z-index: 0;
+}
+
+.quick-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-links a:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Pulsing effect */
+}
+
+/* Sidebar Paragraph Hover Effect */
+.sidebar p:hover {
+    color: #d0d0d0; /* Brighter text color on hover */
+}
+
+/* Responsive Design for Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .quick-links a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .sidebar h2 {
+        font-size: 1.6rem;
+    }
+
+    .sidebar p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* Hero Banner */
+.hero-banner {
+    height: 85vh; /* Slightly shorter */
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 1)), 
+                url('your-dark-background-image.jpg') center/cover no-repeat; /* Dark gradient over image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px; /* Rounded edges */
+    color: #eaeaea; /* Softer light text */
+    padding: 0 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); /* Smooth shadow effect */
+    position: relative;
+    overflow: hidden; /* Ensure smooth rounding */
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px; /* Smoothly rounded content box */
+    background: rgba(255, 255, 255, 0.05); /* Subtle background for text */
+    padding: 40px 20px;
+    backdrop-filter: blur(10px); /* Add subtle blur for elegance */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow for the content block */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3rem; /* Large but slightly smaller */
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    color: #eaeaea; /* Softer off-white */
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: #d0d0d0;
+    font-weight: 300;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4); /* Light shadow for depth */
+}
+
+/* Alien Button - unique button styling */
+.alien-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #00bcd4, #8e44ad); /* Alien-like gradient with unique colors */
+    color: #fff; /* Bright text for contrast */
+    padding: 15px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px 50px 0 0; /* Alien curve, rounded top, flat bottom */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Elevated shadow */
+}
+
+/* Alien Button Hover Effects */
+.alien-button:hover {
+    transform: scale(1.1) rotate(-2deg); /* Alien-like hover effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+}
+
+.alien-button::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: 0;
+}
+
+.alien-button:hover::before {
+    top: -20px;
+    left: -20px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .alien-button {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Styles */
+/* General Projects Section Styling */
+.projects-section {
+    padding: 60px 30px;
+    background: linear-gradient(145deg, #111418, #232526); /* Dark, classy background */
+    border-radius: 40px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Deep shadow for emphasis */
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Projects Section Heading */
+.projects-section h2 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif; /* Classic serif font for elegance */
+    color: #f1f1f1; /* Slightly off-white for softness */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.projects-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: #00f9ff; /* Glowing alien accent line */
+    border-radius: 2px;
+    box-shadow: 0 0 8px #00f9ff;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+    gap: 40px; /* Larger gap for more space between cards */
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.05); /* Light translucent effect */
+    padding: 40px;
+    border-radius: 30px; /* Rounded corners for a soft look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Deep shadow for emphasis */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Larger shadow on hover */
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    transform: rotate(45deg);
+    transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+    left: 100%; /* Sweep effect on hover */
+}
+
+/* Project Card Header (Title + Year) */
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    color: #f0f0ff; /* Bright, alien-inspired color */
+    margin: 0;
+    font-family: 'Georgia', serif; /* Classic, elegant font */
+}
+
+.project-year {
+    font-size: 1.2rem;
+    color: #ff00a5; /* Glowing alien color */
+    font-weight: bold;
+}
+
+/* Project Description */
+.project-card p {
+    font-size: 1.1rem;
+    color: #c2c2c2; /* Soft, light grey for text */
+    line-height: 1.8;
+}
+
+/* Project Links */
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(145deg, #ff00a5, #00f9ff); /* Alien gradient button */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 50px; /* Rounded, pill-shaped button */
+    text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for button depth */
+}
+
+/* Project Link Hover Effect */
+.project-link:hover {
+    background: linear-gradient(145deg, #00f9ff, #ff00a5); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Responsive Design for Projects Section */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 30px 15px;
+        border-radius: 25px;
+    }
+
+    .project-card {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .project-link {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 60px 20px;
+    background: radial-gradient(circle, #0b0b0b, #2a2a2a); /* Deep, dusty space gradient */
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Stronger shadow for more depth */
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Alien Dust and Particle Effect */
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.1), rgba(0, 255, 255, 0.05));
+    border-radius: 40px;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    opacity: 0.5; /* Dusty texture with particle effect */
+    animation: dustParticles 15s infinite linear;
+}
+
+/* Dust Particles Animation */
+@keyframes dustParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Skills Section Heading */
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0; /* Dusty grey-white */
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    position: relative;
+    z-index: 2;
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Compact grid */
+    gap: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Skill Card Styling */
+.skill-card {
+    background: rgba(255, 255, 255, 0.07); /* Dusty translucent background */
+    padding: 12px 22px;
+    border-radius: 30px; /* More rounded for an alien look */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Enhanced dusty shadow effect */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    position: relative;
+    font-size: 1rem;
+    color: #d0d0d0; /* Dusty grey color */
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border for more detail */
+}
+
+/* Alien Dust and Texture Effect */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    transform: translate(-50%, -50%) rotate(45deg);
+    filter: blur(12px); /* Dusty haze effect */
+    opacity: 0.6; /* Stronger dust effect */
+    transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before {
+    opacity: 0.8; /* Increased dust effect on hover */
+}
+
+.skill-card:hover {
+    transform: scale(1.07); /* Slight zoom effect for interaction */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 40px 15px;
+        border-radius: 30px;
+    }
+
+    .skills-container {
+        gap: 10px;
+    }
+
+    .skill-card {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 20px;
+    background: radial-gradient(circle, #0a0a0a, #1e1e1e); /* Deep, subtle space gradient */
+    border-radius: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Deep shadow for subtle depth */
+    margin-bottom: 21px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Alien Dust and Particle Effect */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), rgba(255, 0, 150, 0.05));
+    border-radius: 40px;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0.4; /* Dusty texture */
+    animation: contactDustParticles 20s infinite linear;
+}
+
+/* Dust Particles Animation */
+@keyframes contactDustParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Contact Section Heading */
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0; /* Dusty grey-white */
+    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Text */
+.contact-section p {
+    font-size: 1.1rem;
+    color: #d0d0d0; /* Dusty grey color */
+    line-height: 1.8;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Contact Links Container */
+.contact-links p {
+    margin-bottom: 10px;
+}
+
+/* Contact Item Styling */
+.contact-item {
+    color: #9fa0a5; /* Slightly lighter grey for links */
+    text-decoration: none;
+    position: relative;
+}
+
+.contact-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 255, 255, 0.2); /* Very subtle glow */
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item:hover::after {
+    transform: scaleX(1); /* Fade-in effect on hover */
+}
+
+/* Contact Actions Container */
+.contact-actions {
+    margin-top: 20px;
+}
+
+/* Contact Link Styling */
+.contact-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.07); /* Translucent background */
+    color: #d0d0d0; /* Dusty grey color */
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 20px; /* Rounded edges */
+    text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    position: relative;
+    z-index: 2;
+}
+
+/* Alien Dust and Glow Effect on Links */
+.contact-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(255, 0, 150, 0.1));
+    transform: translate(-50%, -50%) rotate(45deg);
+    filter: blur(8px); /* Subtle dust effect */
+    opacity: 0.3; /* Very subtle dust effect */
+    transition: opacity 0.3s ease;
+}
+
+.contact-link:hover::before {
+    opacity: 0.4; /* Slight increase in dust effect on hover */
+}
+
+.contact-link:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow on hover */
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 15px;
+        border-radius: 30px;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+    }
+
+    .contact-link {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section Styling */
+.footer-section {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 20px;
+    background: radial-gradient(circle, #0a0a0a, #2b2b2b); /* Deep cosmic gradient */
+    color: #e0e0e0; /* Soft grey for text */
+    text-align: center;
+    font-size: 0.9rem; /* Keep footer compact */
+}
+
+/* Alien Dust and Particle Effect */
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(255, 0, 150, 0.1));
+    opacity: 0.3;
+    filter: blur(60px);
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+
+/* Footer Content Container */
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 1rem;
+    color: #d0d0d0; /* Soft, dusty grey */
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Vedic Verse Styling */
+.footer-vedic {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05); /* Light translucent background */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Faint alien glow */
+    margin-bottom: 20px; /* Space for underline */
+}
+
+/* Vedic Verse */
+.vedic-verse {
+    font-size: 0.9rem;
+    color: #c0c0c0; /* Slightly faded grey for text */
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Vedic', serif; /* Elegant Vedic-style font */
+    word-wrap: break-word; /* Handle long text gracefully */
+}
+
+/* Underline Effect for Hover */
+.shloka-underline {
+    height: 4px;
+    background: #c0c0c0; /* Light grey underline */
+    width: 80px;
+    margin: 10px auto;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.shloka-underline:hover {
+    background: #00f9ff; /* Slightly glowing effect on hover */
+}
+
+/* Carousel Styling */
+.carousel {
+    position: absolute;
+    bottom: -20vh;
+    left: 0;
+    width: 100%;
+    height: 25vh; /* Set carousel height */
+    background: radial-gradient(circle, rgba(10, 10, 10, 1), rgba(43, 43, 43, .7));
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px rgba(244, 255, 255, 0.3); /* Faint alien glow */
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    overflow-y: auto; /* Allow scrolling if needed */
+    z-index: 999;
+}
+
+.shloka-underline:hover ~ .carousel, /* Use general sibling combinator */
+.footer-section:hover .carousel {
+    transform: translateY(0);
+}
+
+/* Carousel Content */
+.carousel-content {
+    color: #c0c0c0; /* Slightly faded grey for text */
+    line-height: 1.5;
+    font-family: 'Vedic', serif; /* Elegant Vedic-style font */
+    font-size: 0.8rem; /* Adjust font size for readability */
+}
+
+/* Responsive Design for Footer Section */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 15px 15px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .vedic-verse {
+        font-size: 0.8rem;
+    }
+
+    .shloka-underline {
+        width: 60px;
+    }
+
+    .carousel-content {
+        font-size: 0.7rem;
+    }
+}
