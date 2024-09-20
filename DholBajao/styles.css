@@ -1,6 +1,7 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background: radial-gradient(circle , rgba(176, 98, 98, 0.8));
+  background-color: rgb(51, 47, 47);
 }
 
 h1 {
