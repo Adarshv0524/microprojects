@@ -34,10 +34,33 @@ function playSound(key) {
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
         playSound(this.innerHTML); // Pass the innerHTML of the clicked button
+        
+
+        // Change the text colour of the clicked button
+        var button = this;
+        button.style.color = 'white';
+
+        // reset the text colour to default after 100 milliseconds
+
+        setTimeout(function(){
+            button.style.color = ''; // reset to default
+        } , 100 );
     });
 }
 
-// Add event listener for keydown to play sound when 'w' is pressed
 document.addEventListener("keydown", function(event) {
-    playSound(event.key); // Pass the pressed key
+    playSound(event.key); // Play the sound
+
+    // Select the button that corresponds to the pressed key
+    var button = document.querySelector("." + event.key);
+
+    // If the key corresponds to a drum button, change the text color
+    if (button) {
+        button.style.color = 'white'; // Change the text color
+
+        // Reset the text color to default after 100 milliseconds
+        setTimeout(function() {
+            button.style.color = ''; // Reset to default color
+        }, 100);
+    }
 });
