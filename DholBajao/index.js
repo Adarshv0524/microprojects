@@ -30,37 +30,29 @@ function playSound(key) {
     audio.play(); // Play the sound
 }
 
-// Add event listeners for all drum buttons
-for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-        playSound(this.innerHTML); // Pass the innerHTML of the clicked button
-        
 
-        // Change the text colour of the clicked button
-        var button = this;
-        button.style.color = 'white';
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-        // reset the text colour to default after 100 milliseconds
+for (var i = 0; i < numberOfDrumButtons ; i++) {
+    document.querySelectorAll(".drum")[i].addEventListener('click', function(){
+        var buttonInnerHTML = this.innerHTML;
 
-        setTimeout(function(){
-            button.style.color = ''; // reset to default
-        } , 100 );
+        playSound(buttonInnerHTML);
+
+        buttonAnimation(buttonInnerHTML);
     });
 }
 
-document.addEventListener("keydown", function(event) {
-    playSound(event.key); // Play the sound
+function buttonAnimation(currentKey){
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(() => {
+        activeButton.classList.remove("pressed");
+    }, 2000);
 
-    // Select the button that corresponds to the pressed key
-    var button = document.querySelector("." + event.key);
+}
 
-    // If the key corresponds to a drum button, change the text color
-    if (button) {
-        button.style.color = 'white'; // Change the text color
-
-        // Reset the text color to default after 100 milliseconds
-        setTimeout(function() {
-            button.style.color = ''; // Reset to default color
-        }, 100);
-    }
+document.addEventListener("keypress", function(event){
+    playSound(event.key);
+    buttonAnimation(event.key);
 });
