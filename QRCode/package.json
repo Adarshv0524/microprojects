@@ -1,0 +1,16 @@
+{
+  "name": "qrcode",
+  "version": "1.0.0",
+  "description": "A prgm to generate qr code out of links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adarsh Verma",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^11.0.2",
+    "qr-image": "^3.2.0"
+  }
+}

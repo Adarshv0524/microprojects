@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">
+            <p>QR Code Generator tool</p>
+        </h1>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <label for="qr-input"> Enter text or URL</label>
+            <input type="url" id="qr-input" placeholder="Type here ..." required>
+            <button id="generate-btn">
+                Generate QR Code
+            </button>
+            <p id="input-chk"></p>
+        </section>
+
+        <section class="output-section">
+            <h2>Your QR Code</h2>
+            <canvas id="qr-output"></canvas>
+
+            <button id="download-btn">
+                Download Qr Code
+            </button>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p class="footer-text">Made by Ram Bhakt - Adarsh</p>
+            <div class="footer-vedic">
+                <p class="vedic-verse">
+                    वंशीविभूषितकरान्नवनीरदाभात् पीताम्बरादरुणबिम्बफलाधरोष्ठात्। पूर्णन्दुसुन्दरमुखादरविन्दनेत्रात् कृष्णात्परं किमपि तत्वमहं न जाने।।
+                </p>
+                <div class="shloka-underline"></div>
+                <div class="carousel">
+                    <div class="carousel-content">
+                        <p>जिनके हाथ बाँसुरी से सुसज्जित है, जिनकी त्वचा नए बादल की भांति चमकती हों। जो पीत वस्त्र धारण करते हों, 
+                            जिनके अधर बिम्बा पुष्प की भांति लाल हैं। जिनके मुख चंद्रमा के समान हैं, जिनके कमाल समान नेत्र हैं,
+                             उस कृष्ण के अतिरिक्त मैं और कुछ नहीं जानता।।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

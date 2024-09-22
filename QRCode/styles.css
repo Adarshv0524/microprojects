@@ -1,0 +1,257 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #1a1a1a, #000);
+    color: #b1a1a1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 30px;
+    background: rgba(45, 39, 39, 0.9);
+    border-bottom: 4px solid #00f9ff; /* Bright bottom border */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#title {
+    font-size: 2.5rem;
+    color: #00f9ff;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 0 0 10px #00f9ff, 0 0 20px #00f9ff; /* Glowing text effect */
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    position: relative;
+}
+
+/* Input Section Styles */
+.input-section {
+    background: rgba(48, 38, 38, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.input-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center; /* Center text for better aesthetics */
+}
+
+input[type="url"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+input[type="url"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none; /* Remove outline on focus */
+}
+
+button {
+    background: linear-gradient(45deg, #00f9ff, #00aaff);
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden; /* Contain the pseudo-element */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #00aaff, #0099cc);
+    transform: scale(1.05);
+}
+
+/* Output Section Styles */
+.output-section {
+    text-align: center;
+    background: rgba(40, 35, 35, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(104, 157, 157, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.output-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+canvas {
+    border: 3px solid #00f9ff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 200px; /* Set a fixed width for consistency */
+    height: 200px; /* Set a fixed height for consistency */
+}
+
+/* Footer Section Styling */
+.footer-section {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 20px;
+    background: radial-gradient(circle, #0a0a0a, #2b2b2b);
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Footer Content Container */
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Vedic Verse Styling */
+.footer-vedic {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.vedic-verse {
+    font-size: 1rem;
+    color: #c0c0c0;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Vedic', serif;
+}
+
+/* Underline Effect for Hover */
+.shloka-underline {
+    height: 4px;
+    background: #c0c0c0;
+    width: 80px;
+    margin: 10px auto;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.shloka-underline:hover {
+    background: #00f9ff;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: absolute;
+    bottom: -20vh;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    background: radial-gradient(circle, rgba(10, 10, 10, 1), rgba(43, 43, 43, .7));
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px rgba(244, 255, 255, 0.3);
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.shloka-underline:hover ~ .carousel,
+.footer-section:hover .carousel {
+    transform: translateY(0);
+}
+
+/* Carousel Content */
+.carousel-content {
+    color: #c0c0c0;
+    line-height: 1.5;
+    font-family: 'Vedic', serif;
+    font-size: 0.8rem;
+}
+
+/* Fun Animated Background */
+@keyframes backgroundAnimation {
+    0% { background-color: rgba(0, 255, 255, 0.1); }
+    50% { background-color: rgba(0, 150, 255, 0.1); }
+    100% { background-color: rgba(0, 255, 255, 0.1); }
+}
+
+/* Apply Background Animation */
+input[type="url"]:focus {
+    animation: backgroundAnimation 1s infinite alternate; /* Fun background animation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    #title {
+        font-size: 2rem;
+    }
+
+    .input-section, .output-section {
+        padding: 15px;
+    }
+
+    input[type="url"] {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .vedic-verse {
+        font-size: 0.9rem;
+    }
+
+    .shloka-underline {
+        width: 60px;
+    }
+
+    .carousel-content {
+        font-size: 0.7rem;
+    }
+}
