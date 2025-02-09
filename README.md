@@ -1,1 +1,1 @@
-This is the repo for storing my micro projects
+This is the repo for storing my micro projects.
